@@ -16,6 +16,7 @@ lat_lng = []
 # Read in mammoth_data.csv. Use data to create markers, add to map
 with open('mammoth_data.csv', 'r') as mammoth_csv:
     reader = csv.reader(mammoth_csv, quoting=csv.QUOTE_NONNUMERIC)
+    firstline = reader.__next__() # discard title column titles
     for line in reader:
         lat = line[3]
         lon = line[4]
@@ -38,3 +39,29 @@ mammoth_map.save('mammoth_map.html')
 heatmap = folium.Map(location=[40, -100], zoom_start=4)
 heatmap.add_children(plugins.HeatMap(lat_lng))
 heatmap.save('mammoth_heatmap.html')
+
+
+# Choropleth Map; Mammoths per state TODO
+
+# import pandas
+#
+# choromap = folium.Map(location=[40, -100], zoom_start=4)
+# us_states = r'us_states.json'
+# #data = {'MN': 100, "AZ": 4}
+#
+# data = pandas.read_csv('mammoth_data.csv')  # dataframe from CSV
+#
+# # Need to aggregate all fossils for one state into a new dataframe
+# # Add up the abund_unit value (or 1 if not present) for each state
+#
+# state_data_groups = data.groupby('state')
+# print(state_data_groups.describe())
+#
+# choromap.choropleth(geo_path=us_states,
+# data=data,
+# columns=['state', 'quantity'],
+# fill_color='BuPu', fill_opacity=0.4, line_opacity=0.4,
+# legend_name="Mammoth finds per state"
+# )
+#
+# choromap.save('mammoth_choropleth.html')

@@ -32,4 +32,5 @@ with open('pbdb_data.csv', 'r') as csvfile:
 
 with open('mammoth_data.csv', 'w') as csvfile:
     writer = csv.writer(csvfile, quoting=csv.QUOTE_NONNUMERIC)
+    writer.writerow(['name', 'abd', 'abd_unit', 'lat', 'lng', 'state', 'county', 'comment'])
     writer.writerows(mammoth_data)
