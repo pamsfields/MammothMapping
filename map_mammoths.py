@@ -9,7 +9,7 @@ mammoth_colors = {'Mammuthus columbi' : 'green',
  'Mammuthus': 'orange'}
 
 # Create map. Use terrain tiles instead of roads
-mammoth_map = folium.Map(location=[40, -100], zoom_start=4, tiles='Stamen Terrain')
+mammoth_map = folium.Map(location=[40, -120], zoom_start=3, tiles='Stamen Terrain')
 
 lat_lng = []
 
