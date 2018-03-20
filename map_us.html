@@ -110,7 +110,7 @@
             
         
             
-            <style> #map_89f42dc8aeef4aa9932654408aa3b706 {
+            <style> #map_3c614bd0ee734863a7edcc1635c9f737 {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -126,7 +126,7 @@
             
         
             
-            <div class="folium-map" id="map_89f42dc8aeef4aa9932654408aa3b706" ></div>
+            <div class="folium-map" id="map_3c614bd0ee734863a7edcc1635c9f737" ></div>
         
         
         
@@ -140,9 +140,9 @@
             var northEast = L.latLng(90, 180);
             var bounds = L.latLngBounds(southWest, northEast);
 
-            var map_89f42dc8aeef4aa9932654408aa3b706 = L.map('map_89f42dc8aeef4aa9932654408aa3b706', {
-                                           center:[44.97,-93.28],
-                                           zoom: 13,
+            var map_3c614bd0ee734863a7edcc1635c9f737 = L.map('map_3c614bd0ee734863a7edcc1635c9f737', {
+                                           center:[40,-120],
+                                           zoom: 3,
                                            maxBounds: bounds,
                                            layers: [],
                                            crs: L.CRS.EPSG3857
@@ -151,7 +151,7 @@
         
         
             
-            var tile_layer_f0c59a3ff00040a98e317773438463e7 = L.tileLayer(
+            var tile_layer_2a06b40ee8764ce1b757b16846529cb2 = L.tileLayer(
                 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 {
                     maxZoom: 18,
@@ -159,32 +159,8 @@
                     attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
                     detectRetina: false
                     }
-                ).addTo(map_89f42dc8aeef4aa9932654408aa3b706);
+                ).addTo(map_3c614bd0ee734863a7edcc1635c9f737);
 
-        
-        
-            
-
-            var marker_9a50dd7aff5f4c18a041805d6a06b5d8 = L.marker(
-                [44.9729,-93.2831],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_89f42dc8aeef4aa9932654408aa3b706);
-            
-        
-            
-            var popup_4fc53dd2bce94bc0842bcac2c71c62da = L.popup({maxWidth: '300'});
-
-            
-                var html_84a1bbdfe3fe4cc498f929083a1e2d82 = $('         <div id="html_84a1bbdfe3fe4cc498f929083a1e2d82"                 style="width: 100.0%; height: 100.0%;">                 MCTC</div>                 ')[0];
-                popup_4fc53dd2bce94bc0842bcac2c71c62da.setContent(html_84a1bbdfe3fe4cc498f929083a1e2d82);
-            
-
-            marker_9a50dd7aff5f4c18a041805d6a06b5d8.bindPopup(popup_4fc53dd2bce94bc0842bcac2c71c62da);
-
-            
         
         
         
